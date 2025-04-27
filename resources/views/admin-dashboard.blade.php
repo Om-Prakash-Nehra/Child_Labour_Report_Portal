@@ -16,9 +16,8 @@
             <tr>
                 <th>ID</th>
                 <th>Crime Type</th>
-                <th>Location Link</th>
+                <th>Location Link</th> 
                 <th>Description</th>
-                <th>Proof Image</th>
                 <th>Status</th>
                 <th>Actions</th>
             </tr>
@@ -29,16 +28,15 @@
                     <td>{{ $report->id }}</td>
                     <td>{{ $report->crime_type }}</td>
                     <td>
-                        <a href="{{ $report->location }}" target="_blank">Open Location</a>
-                    </td>
-                    <td>{{ $report->description }}</td>
-                    <td>
-                        @if($report->proof_image_url)
-                            <a href="{{ asset('storage/' . $report->proof_image_url) }}" target="_blank">View Image</a>
+                        @if($report->location)
+                            <a href="{{ Str::startsWith($report->location, ['http://', 'https://']) ? $report->location : 'https://www.google.com/maps?q=' . $report->location }}" target="_blank">
+                                Open Location
+                            </a>
                         @else
-                            No Image
+                            No Location
                         @endif
                     </td>
+                    <td>{{ $report->description }}</td>
                     <td>{{ ucfirst($report->status) }}</td>
                     <td>
                         @if($report->status == 'pending')

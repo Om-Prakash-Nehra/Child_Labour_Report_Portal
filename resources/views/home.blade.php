@@ -8,6 +8,7 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+        position: relative;
     }
 
     .hero-section {
@@ -19,7 +20,7 @@
         align-items: center;
         text-align: center;
         color: white;
-        padding: 40px 20px;
+        padding: 40px 20px;  
         background-color: rgba(0, 0, 0, 0.5);
         background-blend-mode: darken;
     }
@@ -52,9 +53,31 @@
         background: #343a40;
         color: white;
     }
+
+    .admin-login {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .admin-login a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
 </style>
 
 <div class="full-screen-section">
+    <!-- Admin Login Button -->
+    <div class="admin-login">
+        <a href="/admin/login">Admin Login</a>
+    </div>
+
     <div class="hero-section">
         <h1 class="display-4 fw-bold mb-3">Child Labour Help Portal</h1>
         <p class="lead mb-4">Report. Raise Awareness. Protect Children.</p>

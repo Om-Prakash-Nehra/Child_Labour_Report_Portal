@@ -13,7 +13,7 @@
                     <div class="alert alert-success text-center">
                         {{ session('success') }}
                     </div>
-                @endif
+                @endif 
 
                 <form method="POST" action="{{ route('report.send') }}" enctype="multipart/form-data">
                     @csrf
