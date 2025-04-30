@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="proof_image" class="form-label fw-bold">Upload Proof Image (optional)</label>
+                        <label for="proof_image" class="form-label fw-bold">Upload Proof Image </label>
                         <input type="file" class="form-control" id="proof_image" name="proof_image" accept="image/*">
                     </div>
 

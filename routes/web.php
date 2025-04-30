@@ -10,12 +10,9 @@ Route::view('/about', 'about');
 Route::view('/report', 'report');
 Route::view('/contact', 'contact');
 
-
 Route::post('/report', [MailController::class, 'send'])->name('report.send');
 
-
 Route::get('/cases', [MailController::class, 'showCases'])->name('cases.show');
-
 
 Route::get('/admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login.submit');

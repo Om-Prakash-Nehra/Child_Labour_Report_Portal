@@ -73,7 +73,6 @@
 </style>
 
 <div class="full-screen-section">
-    <!-- Admin Login Button -->
     <div class="admin-login">
         <a href="/admin/login">Admin Login</a>
     </div>
